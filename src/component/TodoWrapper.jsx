@@ -10,14 +10,14 @@ function TodoWrapper() {
     const saved = localStorage.getItem("todos");  
     const parse = JSON.parse(saved);
     
-
-    return parse.length > 0 ? parse : [ { content: "學習 React", id: 1, isDone: false, isEditing: false }, { content: "學習 Vue", id: 2, isDone: false, isEditing: false, } ];
+    return  [];
+    //return parse.length > 0 ? parse : [ { content: "學習 React", id: 1, isDone: false, isEditing: false }, { content: "學習 Vue", id: 2, isDone: false, isEditing: false, } ];
   });
 
   
   useEffect(() => {  
     console.log("todos 存進", todos);
-    localStorage.setItem("todos", JSON.stringify(todos));
+    //localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);// 每次 todos 改變時，就會執行
 
   const addtodo = (content) => {
